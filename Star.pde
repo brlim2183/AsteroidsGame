@@ -13,7 +13,7 @@ public class Star //note that this class does NOT extend Floater
 public void show(){
   noStroke();
   fill(myColor);
-  ellipse(myX,myY,(int)(Math.random()*3)+1,(int)(Math.random()*3)+1);
+  ellipse(myX,myY,2,2);
 
   
 }
