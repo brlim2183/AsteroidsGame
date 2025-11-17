@@ -11,7 +11,6 @@ public void setup()
 }
 public void keyPressed() {
   if (key=='1') {
-    //hyperspace
     bob.setmyXspeed(0);
     bob.setmyYspeed(0);
     bob.setmyPointDirection(Math.random()*360);
@@ -19,16 +18,13 @@ public void keyPressed() {
     bob.setmyCenterY(Math.random()*400);
   }
   if (key=='2') {
-    //accelerate
     bob.accelerate(1);
   }
   if (key=='3') {
-    //rotate left
-    bob.turnLeft();
+    bob.turn(-5);
   }
   if (key=='4') {
-    //rotate right
-    bob.turnRight();
+    bob.turn(5);
   }
 }
 public void draw()
@@ -38,4 +34,5 @@ public void draw()
     sue[i].show();
   }
   bob.show();
+  bob.move();
 }
