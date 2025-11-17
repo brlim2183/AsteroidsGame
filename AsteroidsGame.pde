@@ -9,27 +9,18 @@ public void setup()
     sue[i]=new Star();
   }
 }
-public void draw()
-{
-  background(0);
-
-  bob.show();
-  for (int i=0; i<sue.length; i++) {
-    sue[i].show();
-  }
-}
 public void keyPressed() {
   if (key=='1') {
     //hyperspace
     bob.setmyXspeed(0);
     bob.setmyYspeed(0);
-    bob.setmyPointDirection(0);
-    bob.myCenterX=(Math.random()*400);
-    bob.myCenterY=(Math.random()*400);
+    bob.setmyPointDirection(Math.random()*360);
+    bob.setmyCenterX(Math.random()*400);
+    bob.setmyCenterY(Math.random()*400);
   }
   if (key=='2') {
     //accelerate
-    bob.accelerate(2);
+    bob.accelerate(1);
   }
   if (key=='3') {
     //rotate left
@@ -39,4 +30,12 @@ public void keyPressed() {
     //rotate right
     bob.turnRight();
   }
+}
+public void draw()
+{
+  background(0);
+  for (int i=0; i<sue.length; i++) {
+    sue[i].show();
+  }
+  bob.show();
 }
