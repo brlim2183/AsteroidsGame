@@ -2,18 +2,22 @@
 Spaceship bob=new Spaceship();
 Star []sue=new Star[200];
 ArrayList <Asteroid> may= new ArrayList<Asteroid>();
-public void setup()
-{
-  //your code here
-  size(400, 400);
-  for (int i=0; i<sue.length; i++) {
-    sue[i]=new Star();
-  }
-    may.add(0,new Asteroid());
+may.add(0,new Asteroid());
     may.add(1,new Asteroid());
     may.add(2,new Asteroid());
     may.add(3,new Asteroid());
     may.add(4,new Asteroid());
+public void setup()
+{
+  size(400, 400);
+  for (int i=0; i<sue.length; i++) {
+    sue[i]=new Star();
+  }
+   // may.add(0,new Asteroid());
+    //may.add(1,new Asteroid());
+    //may.add(2,new Asteroid());
+    //may.add(3,new Asteroid());
+    //may.add(4,new Asteroid());
 }
 public void keyPressed() {
   if (key=='1') {
