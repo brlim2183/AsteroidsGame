@@ -46,7 +46,7 @@ public void draw()
     may.get(i).show();
     may.get(i).move();
     float d= dist((float)bob.getX(),(float)bob.getY(),(float)may.get(i).getX(),(float)may.get(i).getY());
-    if (d<10)
+    if (d<15)
     may.remove(i);
   }
 }
