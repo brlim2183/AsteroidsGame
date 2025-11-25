@@ -49,4 +49,3 @@ public void draw()
     may.remove(i);
   }
 }
-
