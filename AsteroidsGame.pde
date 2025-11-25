@@ -13,7 +13,7 @@ public void setup()
   }
 }
 public void keyPressed() {
-  if (key=='1') {
+  if (key=='c') {
     bob.setmyXspeed(0);
     bob.setmyYspeed(0);
     bob.setmyPointDirection(Math.random()*360);
@@ -23,13 +23,13 @@ public void keyPressed() {
      may.add(i,new Asteroid()); 
     }
   }
-  if (key=='2') {
+  if (key=='v') {
     bob.accelerate(1);
   }
-  if (key=='3') {
+  if (key=='b') {
     bob.turn(-5);
   }
-  if (key=='4') {
+  if (key=='n') {
     bob.turn(5);
   }
 }
