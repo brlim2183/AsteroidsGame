@@ -9,7 +9,7 @@ public void setup()
     sue[i]=new Star();
   }
   for (int i=0; i<5; i++){
-    may.add(i,new Asteroid());
+    may.add(new Asteroid());
   }
 }
 public void keyPressed() {
