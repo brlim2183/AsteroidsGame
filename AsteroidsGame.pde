@@ -8,9 +8,9 @@ public void setup()
   for (int i=0; i<sue.length; i++) {
     sue[i]=new Star();
   }
-  //for (int i=0; i<5; i++){
-   // may.add(new Asteroid());
- // }
+  for (int i=0; i<5; i++){
+   may.add(new Asteroid());
+ }
 }
 public void keyPressed() {
   if (key=='1') {
