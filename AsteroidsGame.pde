@@ -19,9 +19,7 @@ public void keyPressed() {
     bob.setmyPointDirection(Math.random()*360);
     bob.setmyCenterX(Math.random()*400);
     bob.setmyCenterY(Math.random()*400);
-    for(int i=may.size(); i<5;i++){
-     may.add(i,new Asteroid()); 
-    }
+   
   }
   if (key=='2') {
     bob.accelerate(1);
