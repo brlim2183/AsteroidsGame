@@ -2,6 +2,7 @@
 Spaceship bob=new Spaceship();
 Star []sue=new Star[200];
 ArrayList <Asteroid> may= new ArrayList<Asteroid>();
+ArrayList<Bullet> bull= new ArrayList<Bullet>();
 public void setup()
 {
   size(400, 400);
@@ -9,8 +10,8 @@ public void setup()
     sue[i]=new Star();
   }
   for (int i=0; i<5; i++){
-   may.add(new Asteroid());
- }
+    may.add(new Asteroid());
+  }
 }
 public void keyPressed() {
   if (key=='1') {
@@ -19,7 +20,9 @@ public void keyPressed() {
     bob.setmyPointDirection(Math.random()*360);
     bob.setmyCenterX(Math.random()*400);
     bob.setmyCenterY(Math.random()*400);
-   
+    //for(int i=may.size(); i<5;i++){
+    // may.add(i,new Asteroid()); 
+    //}
   }
   if (key=='2') {
     bob.accelerate(1);
@@ -29,6 +32,9 @@ public void keyPressed() {
   }
   if (key=='4') {
     bob.turn(5);
+  }
+  if (key=='5') {
+    bull.add(new Bullet(bob));
   }
 }
 public void draw()
@@ -46,4 +52,16 @@ public void draw()
     if (d<15)
     may.remove(i);
   }
+  for(int i=0; i<bull.size();i++){
+  bull.get(i).show();
+  bull.get(i).move();
+  for (int k=0; k<may.size(); k++){
+  float e= dist((float)bull.get(i).getX(), (float)bull.get(i).getY(), (float)may.get(k).getX(), (float)may.get(k).getY());
+  if(e<5){
+    bull.remove(i);
+    may.remove(k);
+    break;
+    }
+  }
+}
 }
