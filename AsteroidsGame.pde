@@ -57,7 +57,7 @@ public void draw()
   bull.get(i).move();
   for (int k=0; k<may.size(); k++){
   float e= dist((float)bull.get(i).getX(), (float)bull.get(i).getY(), (float)may.get(k).getX(), (float)may.get(k).getY());
-  if(e<8){
+  if(e<9){
     bull.remove(i);
     may.remove(k);
     break;
